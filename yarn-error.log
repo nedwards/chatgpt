@@ -1,0 +1,40 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add --exact --cwd /Users/s68611/projects/personal/chatgpt react react-dom next
+
+PATH: 
+  /Users/s68611/projects/personal/chatgpt/node_modules/.bin:/Users/s68611/projects/personal/node_modules/.bin:/Users/s68611/projects/node_modules/.bin:/Users/s68611/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/usr/local/bin:/Users/s68611/bin:/Users/s68611/bin:/Users/s68611/bin:/Users/s68611/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/s68611/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.14.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: self signed certificate in certificate chain
+      at TLSSocket.onConnectSecure (node:_tls_wrap:1530:34)
+      at TLSSocket.emit (node:events:526:28)
+      at TLSSocket._finishInit (node:_tls_wrap:944:8)
+      at TLSWrap.ssl.onhandshakedone (node:_tls_wrap:725:12)
+
+npm manifest: 
+  {
+    "name": "chatgpt",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
