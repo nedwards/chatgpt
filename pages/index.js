@@ -9,20 +9,21 @@ function HomePage() {
     e.preventDefault()
     try {
       const apiResponse = await axios.post(
-        'https://api.openai.com/v1/text-davinci/generations',
+        'https://api.openai.com/v1/completions',
         {
           prompt: inputText,
-          model: 'text-davinci-002'
+          model: 'text-davinci-003',
+          temperature: 0,
+          max_tokens: 200
         },
         {
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${process.env.OPENAI_API_KEY}`
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`
           }
         }
       )
-      setResponse(apiResponse.data)
-      console.log('response', apiResponse.data)
+      setResponse(apiResponse.data.choices[0].text)
     } catch (error) {
       console.error(error)
     }
@@ -38,7 +39,7 @@ function HomePage() {
         />
         <button type="submit">Generate Text</button>
       </form>
-      <textarea value={response} readOnly />
+      <div>{response}</div>
     </div>
   )
 }
